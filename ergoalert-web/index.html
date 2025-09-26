@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ErgoAlert – Prototipo IoT</title>
+    <script src="https://unpkg.com/paho-mqtt/paho-mqtt-min.js"></script>
+
+    <style>
+      :root { color-scheme: dark light; }
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; margin: 0; background: #0b1020; color: #e7e9ee; }
+      .container { max-width: 960px; margin: 2rem auto; padding: 1.25rem; }
+      .card { background: #11162a; border: 1px solid #1f2a48; border-radius: 16px; padding: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+      .row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+      label { font-size: 0.875rem; opacity: 0.9; }
+      input, select { width: 100%; padding: 0.6rem 0.75rem; border-radius: 12px; border: 1px solid #2a3558; background: #0e1428; color: #e7e9ee; outline: none; }
+      button { padding: 0.65rem 0.9rem; border-radius: 12px; border: 1px solid #2a3558; background: #182042; color: #e7e9ee; cursor: pointer; }
+      button.primary { background: #3354ff; border-color: #4462ff; }
+      button.warning { background: #9b1c1c; border-color: #c33; }
+      button:disabled { opacity: 0.5; cursor: not-allowed; }
+      .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+      .badge { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 999px; border: 1px solid #2a3558; background: #0e1428; }
+      .badge.ok { border-color: #285a2a; color: #c3ffcf; background: #0f2b14; }
+      .badge.err { border-color: #6b1a1a; color: #ffd0d0; background: #2a0f0f; }
+      .alert { margin-top: 1rem; padding: 1rem; border-radius: 14px; border: 1px solid #5a2323; background: #2a0f0f; color: #ffd0d0; display: none; }
+      .log { height: 220px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; background: #0e1428; border: 1px solid #2a3558; border-radius: 12px; padding: 0.75rem; }
+      .muted { opacity: 0.7; }
+      .grid { display: grid; gap: 0.75rem; }
+      .footer { margin-top: 1rem; opacity: 0.7; font-size: 0.9rem; }
+      a { color: #89a2ff; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
